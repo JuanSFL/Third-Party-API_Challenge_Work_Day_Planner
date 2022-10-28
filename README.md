@@ -1,4 +1,4 @@
-# Work Day Planner built using third party API's
+# Work Day Planner Built Using Third-Party APIs
 
 ## Description
 
