@@ -31,3 +31,31 @@ $(document).ready(function () {
     $("#hour18 .description").val(localStorage.getItem("hour18"));
     timeTracker();
 })
+
+function timeTracker() {
+    //gets current number of hours.
+    var timeNow = moment().hour();
+
+    // loops over time blocks
+    $(".time-block").each(function () {
+        var timeBlock = parseInt($(this).attr("id").split("hour")[1]);
+
+        // Checks time and changes background color depending on past/present/future
+
+        if (timeBlock === timeNow) {
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        }
+        else if (timeBlock < timeNow) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        }
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+        }
+    })
+}
