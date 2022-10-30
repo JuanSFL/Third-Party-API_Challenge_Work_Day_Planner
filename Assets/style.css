@@ -80,4 +80,24 @@ button:hover{
 box-shadow: 3px 3px 10px black;
 transform:scale(1.1);
 }
+button:active{
+  box-shadow:3px 3px 10px black; ;
+}
 
+
+@media screen and (max-width:768px), screen and (max-width:480px){
+  .row{
+    height: fit-content;
+    margin: 15px;
+  }
+  .hour{
+    padding-right: 20%;
+  }
+  .saveBtn{
+    border: solid 1px;
+   height: 60px;
+  }
+  textarea{
+    min-height: 70px;
+  }
+};
